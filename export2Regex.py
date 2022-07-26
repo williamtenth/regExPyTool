@@ -13,4 +13,4 @@ with open(file) as f:
 		# pattern for example _(\d+)_(\d+)_(\d+)
 		#print(pattern)
 		result = re.search(pattern, line)
-		print(result.group())
+		print(result.groups())
