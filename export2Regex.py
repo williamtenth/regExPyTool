@@ -4,13 +4,19 @@ import re
 import sys
 
 file = sys.argv[1]
-stringPattern = sys.argv[2]
+stringValue = sys.argv[2]
+stringPattern = sys.argv[3]
+print ("Number of arguments:", len(sys.argv), "arguments")
+print ("Argument List:", str(sys.argv))
 with open(file) as f:
 	for line in f:#lines:
-		if "Service" not in line:
-			continue
+		#if stringValue != "none":
+		#	continue
+		#if stringValue not in line:
+		#	continue
 		pattern = re.compile(stringPattern)
 		# pattern for example _(\d+)_(\d+)_(\d+)
-		#print(pattern)
 		result = re.search(pattern, line)
-		print(result.groups())
+		#print("Resultado:",result)
+		if result != None:
+			print(result.groups())
