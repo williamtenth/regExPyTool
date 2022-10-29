@@ -8,8 +8,8 @@ fileUrl = sys.argv[2]
 filePattern = open(fileUrl, "r")
 stringPattern = filePattern.read()
 #print ("Number of arguments:", len(sys.argv), "arguments")
-#print ("Argument List:", str(sys.argv))
-#print (stringPattern)
+print ("Argument List:", str(sys.argv))
+print (stringPattern)
 with open(fileData) as f:
 	for line in f:#lines:
 		#if stringValue != "none":
